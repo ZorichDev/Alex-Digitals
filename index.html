@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Digitals - Professional Content & Video Editing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom CSS Variables */
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #25d366;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f1f5f9;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+        }
+        
+        /* Hero Video Section */
+        .hero-video-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg, 
+                rgba(102, 126, 234, 0.8) 0%, 
+                rgba(118, 75, 162, 0.7) 50%,
+                rgba(0, 0, 0, 0.6) 100%
+            );
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--text-light);
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        /* Button Styles */
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Service Cards */
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-color);
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .service-description {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .whatsapp-btn {
+            background: var(--accent-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* Section Styling */
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-video-container {
+                height: 80vh;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body class="text-white">
+    <!-- Hero Section with Video Background -->
+    <section class="hero-video-container" id="services">
+        <!-- Background Video -->
+        <iframe 
+            class="hero-video-bg"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&showinfo=0&rel=0&modestbranding=1" 
+            title="Alex Digitals - Video Editing Introduction" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to Alex Digitals
+            </h1>
+            <p class="hero-subtitle">
+                Professional Content & Video Editing Services that Transform Your Vision into Stunning Reality
+            </p>
+            <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I'm%20interested%20in%20your%20professional%20video%20editing%20services.%20Can%20we%20discuss%20my%20project?" 
+               target="_blank" 
+               class="btn-primary">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Start Your Project
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 px-4 bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title">Our Premium Services</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Editing Service -->
+                <div class="service-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e1f1587e-73ae-42b2-a38b-553e868e5d95.png" 
+                         alt="Professional video editing interface with timeline and effects"
+                         class="service-image" />
+                    <h3 class="service-title">
+                        <i class="fas fa-video text-purple-400 mr-2"></i>
+                        Video Editing
+                    </h3>
+                    <p class="service-description">
+                        Transform raw footage into cinematic masterpieces. We provide high-quality video editing for commercials, social media content, corporate videos, and personal projects with professional color grading and seamless transitions.
+                    </p>
+                </div>
+                
+                <!-- Content Creation Service -->
+                <div class="service-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/13b1d86d-3cab-4d77-a030-4d7527de0854.png" 
+                         alt="Digital content creation workspace with design tools"
+                         class="service-image" />
+                    <h3 class="service-title">
+                        <i class="fas fa-palette text-blue-400 mr-2"></i>
+                        Content Creation
+                    </h3>
+                    <p class="service-description">
+                        Bring your ideas to life with stunning visual content. Our creative team designs graphics, animations, and multimedia content that captivates your audience and strengthens your brand identity.
+                    </p>
+                </div>
+                
+                <!-- Social Media Content Service -->
+                <div class="service-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7c90031c-6e4c-4198-ac2a-e3e9af0bd99f.png" 
+                         alt="Social media dashboard with analytics and content scheduling"
+                         class="service-image" />
+                    <h3 class="service-title">
+                        <i class="fas fa-share-alt text-green-400 mr-2"></i>
+                        Social Media Content
+                    </h3>
+                    <p class="service-description">
+                        Boost your online presence with engaging social media content. We create scroll-stopping posts, stories, and videos optimized for each platform to maximize engagement and grow your following.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 bg-slate-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="section-title">About Alex Digitals</h2>
+            
+            <p class="about-text">
+                At Alex Digitals, we specialize in transforming your creative vision into stunning visual content that resonates with your audience. With years of expertise in video editing and digital content creation, we deliver professional results that not only meet but exceed expectations.
+            </p>
+            
+            <p class="about-text">
+                Our passion lies in storytelling through visual media, helping brands and individuals communicate their message effectively in today's digital landscape.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+                <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I'd%20like%20to%20get%20a%20quote%20for%20my%20project." 
+                   target="_blank" 
+                   class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-calculator mr-2"></i>
+                    Get a Quote
+                </a>
+                
+                <a href="#services" 
+                   class="bg-transparent border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    <i class="fas fa-arrow-up mr-2"></i>
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 text-center bg-slate-950 border-t border-slate-700">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-6">
+                <h3 class="text-2xl font-bold mb-2">Alex Digitals</h3>
+                <p class="text-slate-400">Professional Content & Video Editing Services</p>
+            </div>
+            
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:info@alexdigitals.com" class="text-slate-400 hover:text-white transition duration-300">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="https://wa.me/+2349032664629" target="_blank" class="text-slate-400 hover:text-green-400 transition duration-300">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-blue-400 transition duration-300">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-red-400 transition duration-300">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-slate-500">
+                © 2025 Alex Digitals. All rights reserved. | 
+                <a href="mailto:info@alexdigitals.com" class="hover:text-white transition duration-300">alexdigitals@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/+2348123456789?text=Hi%20Alex%20Digitals!%20I'm%20interested%20in%20your%20services.%20Can%20we%20discuss%20my%20project?" 
+           target="_blank" 
+           class="whatsapp-btn"
+           title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Enhanced Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Staggered animation for service cards
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 150);
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate service cards on scroll
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                observer.observe(card);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading effect
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // WhatsApp button interaction feedback
+        document.querySelector('.whatsapp-btn').addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1.1)';
+            }, 100);
+        });
+
+        // Note: Removed the problematic parallax effect that was causing text to scatter
+        // The hero content now stays properly positioned during scroll
+    </script>
+</body>
+</html>
