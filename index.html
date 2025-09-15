@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Digitals - AI Freelance Training & Professional Digital Services</title>
+    <title>Aligxa Digitals - AI Freelance Training & Professional Digital Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -446,6 +446,182 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--secondary-color);
         }
+        
+        .naira{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            /* background: linear-gradient(135deg, #f0f2f5 0%, #e8ebf0 100%); */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px; 
+        }
+         .container--text {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header-text {
+            color: #666;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.7;
+        }
+
+        .main-cta {
+            background: linear-gradient(135deg, #00d084 0%, #00b377 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 25px rgba(0, 208, 132, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .main-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 208, 132, 0.4);
+        }
+
+        .checkmark {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 16px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #00d084;
+            line-height: 1;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d084 0%, #00b377 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #999;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
+            flex-wrap: wrap;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .benefit-check {
+            color: #00d084;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .separator {
+            color: #00d084;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container--text{
+                padding: 0 10px;
+            }
+            
+            .main-cta {
+                font-size: 18px;
+                padding: 18px 25px;
+            }
+            
+            .stat-number {
+                font-size: 40px;
+            }
+            
+            .benefits {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .separator {
+                display: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container--text > * {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .main-cta {
+            animation-delay: 0.2s;
+        }
+
+        .stats-grid {
+            animation-delay: 0.4s;
+        }
+
+        .benefits {
+            animation-delay: 0.6s;
+        }
     </style>
 </head>
 
@@ -461,7 +637,8 @@
                         Learn how to build a 6-figure AI freelance business with our comprehensive 8-module training program
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I'm%20interested%20in%20your%20AI%20Freelance%20Training%20Program." 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-rocket mr-2"></i>
@@ -485,7 +662,8 @@
                         Transform your raw footage into cinematic masterpieces with our expert video editing services
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20need%20professional%20video%20editing%20services." 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-video mr-2"></i>
@@ -509,7 +687,8 @@
                         Bring your brand to life with stunning visual content and social media strategies that engage and convert
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20need%20help%20with%20content%20creation." 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-palette mr-2"></i>
@@ -533,7 +712,8 @@
                         Master the strategies to land high-paying international remote jobs and work from anywhere in the world
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20want%20to%20learn%20about%20remote%20job%20strategies." 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-globe mr-2"></i>
@@ -570,7 +750,8 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="section-title">AI Freelance Training Modules</h2>
             <p class="text-center text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
-                Master the complete system for building a profitable AI freelance business from 5-figures to 6-figures
+                Master the complete system for building a profitable Al freelance business from the comfort of your home.
+                A Business Model That Can Make You Earn $1000/$1500 Monthly With Just Your Phone…
             </p>
             
             <div class="grid lg:grid-cols-2 gap-6">
@@ -656,40 +837,13 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20want%20to%20join%20your%20AI%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20pricing%20and%20enrollment?" 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+" 
                    target="_blank" 
                    class="btn-primary text-xl px-12 py-4">
                     <i class="fas fa-graduation-cap mr-3"></i>
                     Enroll in AI Training Program
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Section 1 -->
-    <section class="py-20 px-4 bg-slate-800">
-        <div class="max-w-7xl mx-auto">
-            <div class="video-section">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/bw-4XnA7g2I?si=xoFAl5LEfZveh7mr" 
-                            title="AI Freelance Success Story" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="video-text">
-                    <h3 class="video-title">From Zero to ₦100K in 30 Days</h3>
-                    <p class="video-description">
-                        Watch how our students are transforming their lives using AI freelancing strategies. Learn the exact steps they took to build profitable online businesses without any prior experience.
-                    </p>
-                    <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20watched%20your%20success%20story%20video%20and%20want%20to%20get%20started." 
-                       target="_blank" 
-                       class="btn-primary">
-                        <i class="fas fa-play mr-2"></i>
-                        Start Your Journey
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -745,33 +899,56 @@
         </div>
     </section>
 
-    <!-- Video Section 2 -->
-    <section class="py-20 px-4 bg-slate-800">
-        <div class="max-w-7xl mx-auto">
-            <div class="video-section reverse">
-                <div class="video-text">
-                    <h3 class="video-title">AI Tools That Changed Everything</h3>
-                    <p class="video-description">
-                        Discover the powerful AI tools and techniques we use to create stunning content, automate workflows, and build successful online businesses. See live demonstrations and real results.
-                    </p>
-                    <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20want%20to%20learn%20about%20the%20AI%20tools%20you%20use." 
-                       target="_blank" 
-                       class="btn-primary">
-                        <i class="fas fa-tools mr-2"></i>
-                        Learn These Tools
-                    </a>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/qOst-2bUUdU?si=5MRX7CPKEbt4_Qsa"  
-                            title="AI Tools and Techniques Demo" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
+    <section class="naira">
+        <div class="container--text">
+       
+        
+         <button class="main-cta" onclick="openWhatsApp()">
+         <span class="checkmark">✓</span>
+          I'M READY TO ESCAPE THE NAIRA STRUGGLE
+        </button>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">STUDENTS</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">YEARS EXP</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">FREE</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">AI</div>
+                <div class="stat-label">POWERED</div>
             </div>
         </div>
+        
+        <div class="benefits">
+            <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span>Completely FREE</span>
+            </div>
+            <span class="separator">•</span>
+            <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span>No Credit Card</span>
+            </div>
+            <span class="separator">•</span>
+            <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span>Instant Access</span>
+            </div>
+        </div>
+    </div>
     </section>
+
 
     <!-- Free AI Freelance Opportunity Section -->
     <section class="py-20 px-4 bg-gradient-to-br from-purple-900 to-blue-900">
@@ -802,14 +979,16 @@
             </div>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20want%20to%20join%20the%20FREE%20AI%20Freelance%20community!" 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+!" 
                    target="_blank" 
                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 text-lg">
                     <i class="fab fa-whatsapp mr-3"></i>
                     Join Free Community
                 </a>
                 
-                <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I%20want%20more%20details%20about%20the%20AI%20training%20program." 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+." 
                    target="_blank" 
                    class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 font-bold py-4 px-8 rounded-full transition duration-300 text-lg">
                     <i class="fas fa-info-circle mr-3"></i>
@@ -822,10 +1001,10 @@
     <!-- About Section -->
     <section class="py-20 px-4 bg-slate-800">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title">About Alex Digitals</h2>
+            <h2 class="section-title">About Aligxa Digitals</h2>
             
             <p class="about-text">
-                At Alex Digitals, we're pioneering the future of freelancing with AI-powered solutions. Our mission is to empower individuals to build profitable online businesses using cutting-edge artificial intelligence tools and proven strategies.
+                At Aligxa Digitals, we're pioneering the future of freelancing with AI-powered solutions. Our mission is to empower individuals to build profitable online businesses using cutting-edge artificial intelligence tools and proven strategies.
             </p>
             
             <p class="about-text">
@@ -833,7 +1012,8 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-                <a href="https://wa.me/+2349032664629?text=Hi%20Alex,%20I'd%20like%20to%20get%20a%20quote%20for%20my%20project." 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+." 
                    target="_blank" 
                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
                     <i class="fas fa-calculator mr-2"></i>
@@ -853,7 +1033,7 @@
     <footer class="py-12 px-4 text-center bg-slate-950 border-t border-slate-700">
         <div class="max-w-4xl mx-auto">
             <div class="mb-6">
-                <h3 class="text-2xl font-bold mb-2">Alex Digitals</h3>
+                <h3 class="text-2xl font-bold mb-2">Aligxa Digitals</h3>
                 <p class="text-slate-400">AI Freelance Training & Professional Digital Services</p>
             </div>
             
@@ -867,16 +1047,16 @@
                 <a href="" class="text-slate-400 hover:text-blue-400 transition duration-300">
                     <i class="fab fa-instagram text-xl"></i>
                 </a>
-                <a href="https://youtube.com/@aligxadigitals?si=eLxJTyy1-W875Ypv" class="text-slate-400 hover:text-red-400 transition duration-300">
-                    <i class="fab fa-youtube text-xl"></i>
+                <!-- <a href="https://youtube.com/@aligxadigitals?si=eLxJTyy1-W875Ypv" class="text-slate-400 hover:text-red-400 transition duration-300"> -->
+                    <!-- <i class="fab fa-youtube text-xl"></i> -->
                 </a>
-                <a href="#" class="text-slate-400 hover:text-blue-500 transition duration-300">
-                    <i class="fab fa-telegram text-xl"></i>
+                <!-- <a href="#" class="text-slate-400 hover:text-blue-500 transition duration-300"> -->
+                    <!-- <i class="fab fa-telegram text-xl"></i> -->
                 </a>
             </div>
             
             <p class="text-slate-500">
-                © 2025 Alex Digitals. All rights reserved. | 
+                © 2025 Aligxa Digitals. All rights reserved. | 
                 <a href="mailto:alexdigitals@gmail.com" class="hover:text-white transition duration-300">alexdigitals@gmail.com</a>
             </p>
         </div>
@@ -884,7 +1064,8 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/+2349032664629?text=Hi%20Alex%20Digitals!%20I'm%20interested%20in%20your%20services.%20Can%20we%20discuss%20my%20project?" 
+        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
+" 
            target="_blank" 
            class="whatsapp-btn"
            title="Chat with us on WhatsApp">
@@ -1008,5 +1189,37 @@
             });
         });
     </script>
+
+    <script>
+        // Add click interaction for the main CTA button
+        document.querySelector('.main-cta').addEventListener('click', function() {
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = '';
+                alert('Ready to start your journey! 🚀');
+            }, 150);
+        });
+
+        // Add hover effects for stat cards
+        const statCards = document.querySelectorAll('.stat-card');
+        statCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderLeft = '4px solid #00d084';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderLeft = 'none';
+            });
+        });
+    </script>
+
+    <script>
+  function openWhatsApp() {
+    const phoneNumber = "0902664629"; // replace with your WhatsApp number (in intl format, no +)
+    const message = "Hi Aligxa Digitals, my name is ……(your name) I want to join your Al Freelance Training Program. Can you tell me more about enrollment?";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  }
+</script>
 </body>
 </html>
