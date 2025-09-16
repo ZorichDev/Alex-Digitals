@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aligxa Digitals - AI Freelance Training & Professional Digital Services</title>
+    
+    <!-- External Resources -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- Custom Styles -->
     <style>
+        /* CSS Variables */
         :root {
             --primary-color: #667eea;
             --secondary-color: #764ba2;
@@ -18,6 +22,7 @@
             --text-light: #f1f5f9;
         }
         
+        /* Base Styles */
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--dark-bg);
@@ -392,71 +397,17 @@
             margin: 0 auto 2rem;
         }
         
-        /* Animations */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .video-section {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .video-section.reverse {
-                flex-direction: column;
-            }
-            
-            .slider-arrow {
-                display: none;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .whatsapp-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: var(--dark-bg);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary-color);
-        }
-        
-        .naira{
+        /* Naira Section Specific Styles */
+        .naira {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            /* background: linear-gradient(135deg, #f0f2f5 0%, #e8ebf0 100%); */
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px; 
         }
-         .container--text {
+        
+        .container--text {
             max-width: 500px;
             width: 100%;
             text-align: center;
@@ -529,7 +480,7 @@
             color: rgba(102, 126, 234, 0.4);
             line-height: 1;
             margin-bottom: 10px;
-            background:  rgba(102, 126, 234, 0.4);
+            background: rgba(102, 126, 234, 0.4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -572,30 +523,84 @@
             font-weight: bold;
         }
 
-        @media (max-width: 600px) {
-            .container--text{
-                padding: 0 10px;
+         .feedback-carousel {
+        position: relative;
+    }
+    
+    .feedback-track {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    
+    .feedback-image {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .feedback-image:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .feedback-nav-btn {
+        background: rgba(30, 41, 59, 0.8);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .feedback-nav-btn:hover {
+        background: rgba(102, 126, 234, 0.8);
+    }
+    
+    .feedback-prev {
+        left: 10px;
+    }
+    
+    .feedback-next {
+        right: 10px;
+    }
+    
+    .feedback-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .feedback-dot.active {
+        background: white;
+        transform: scale(1.2);
+    }
+    
+    #lightbox {
+        transition: opacity 0.3s ease;
+    }
+        
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1); 
             }
-            
-            .main-cta {
-                font-size: 18px;
-                padding: 18px 25px;
-            }
-            
-            .stat-number {
-                font-size: 40px;
-            }
-            
-            .benefits {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .separator {
-                display: none;
+            50% { 
+                transform: scale(1.1); 
             }
         }
-
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -622,10 +627,84 @@
         .benefits {
             animation-delay: 0.6s;
         }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .video-section {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .video-section.reverse {
+                flex-direction: column;
+            }
+            
+            .slider-arrow {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container--text {
+                padding: 0 10px;
+            }
+            
+            .main-cta {
+                font-size: 18px;
+                padding: 18px 25px;
+            }
+            
+            .stat-number {
+                font-size: 40px;
+            }
+            
+            .benefits {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .separator {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body class="text-white">
+    
     <!-- Hero Slider Section -->
     <section class="hero-slider">
         <!-- Slide 1: AI Freelance Training -->
@@ -637,8 +716,7 @@
                         Learn how to build a 6-figure AI freelance business with our comprehensive 8-module training program
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-" 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-rocket mr-2"></i>
@@ -662,8 +740,7 @@
                         Transform your raw footage into cinematic masterpieces with our expert video editing services
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-" 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-video mr-2"></i>
@@ -687,8 +764,7 @@
                         Bring your brand to life with stunning visual content and social media strategies that engage and convert
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-" 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-palette mr-2"></i>
@@ -712,8 +788,7 @@
                         Master the strategies to land high-paying international remote jobs and work from anywhere in the world
                     </p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-" 
+                        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks" 
                            target="_blank" 
                            class="btn-primary">
                             <i class="fas fa-globe mr-2"></i>
@@ -755,6 +830,7 @@
             </p>
             
             <div class="grid lg:grid-cols-2 gap-6">
+                <!-- Module 1 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">1</div>
@@ -765,6 +841,7 @@
                     </div>
                 </div>
                 
+                <!-- Module 2 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">2</div>
@@ -775,6 +852,7 @@
                     </div>
                 </div>
                 
+                <!-- Module 3 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">3</div>
@@ -785,6 +863,7 @@
                     </div>
                 </div>
                 
+                <!-- Module 4 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">4</div>
@@ -795,6 +874,7 @@
                     </div>
                 </div>
                 
+                <!-- Module 5 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">5</div>
@@ -805,6 +885,7 @@
                     </div>
                 </div>
                 
+                <!-- Module 6 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">6</div>
@@ -815,6 +896,7 @@
                     </div>
                 </div>
                 
+                <!-- Module 7 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">7</div>
@@ -825,6 +907,7 @@
                     </div>
                 </div>
                 
+                <!-- Module 8 -->
                 <div class="module-card">
                     <div class="flex items-start">
                         <div class="module-number">8</div>
@@ -837,8 +920,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-" 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks" 
                    target="_blank" 
                    class="btn-primary text-xl px-12 py-4">
                     <i class="fas fa-graduation-cap mr-3"></i>
@@ -899,56 +981,54 @@
         </div>
     </section>
 
+    <!-- Naira Struggle Section -->
     <section class="naira">
         <div class="container--text">
-       
-        
-         <button class="main-cta" onclick="openWhatsApp()">
-         <span class="checkmark">✓</span>
-          I'M READY TO ESCAPE THE NAIRA STRUGGLE
-        </button>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">10K+</div>
-                <div class="stat-label">STUDENTS</div>
+            <button class="main-cta" onclick="openWhatsApp()">
+                <span class="checkmark">✓</span>
+                I'M READY TO ESCAPE THE NAIRA STRUGGLE
+            </button>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">STUDENTS</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">YEARS EXP</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">FREE</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">AI</div>
+                    <div class="stat-label">POWERED</div>
+                </div>
             </div>
             
-            <div class="stat-card">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">YEARS EXP</div>
-            </div>
-            
-            <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">FREE</div>
-            </div>
-            
-            <div class="stat-card">
-                <div class="stat-number">AI</div>
-                <div class="stat-label">POWERED</div>
+            <div class="benefits">
+                <div class="benefit-item">
+                    <span class="benefit-check">✓</span>
+                    <span>Completely FREE</span>
+                </div>
+                <span class="separator">•</span>
+                <div class="benefit-item">
+                    <span class="benefit-check">✓</span>
+                    <span>No Credit Card</span>
+                </div>
+                <span class="separator">•</span>
+                <div class="benefit-item">
+                    <span class="benefit-check">✓</span>
+                    <span>Instant Access</span>
+                </div>
             </div>
         </div>
-        
-        <div class="benefits">
-            <div class="benefit-item">
-                <span class="benefit-check">✓</span>
-                <span>Completely FREE</span>
-            </div>
-            <span class="separator">•</span>
-            <div class="benefit-item">
-                <span class="benefit-check">✓</span>
-                <span>No Credit Card</span>
-            </div>
-            <span class="separator">•</span>
-            <div class="benefit-item">
-                <span class="benefit-check">✓</span>
-                <span>Instant Access</span>
-            </div>
-        </div>
-    </div>
     </section>
-
 
     <!-- Free AI Freelance Opportunity Section -->
     <section class="py-20 px-4 bg-gradient-to-br from-purple-900 to-blue-900">
@@ -979,16 +1059,14 @@
             </div>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-!" 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks!" 
                    target="_blank" 
                    class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 text-lg">
                     <i class="fab fa-whatsapp mr-3"></i>
                     Join Free Community
                 </a>
                 
-                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-." 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks." 
                    target="_blank" 
                    class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 font-bold py-4 px-8 rounded-full transition duration-300 text-lg">
                     <i class="fas fa-info-circle mr-3"></i>
@@ -1012,8 +1090,7 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-." 
+                <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks." 
                    target="_blank" 
                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
                     <i class="fas fa-calculator mr-2"></i>
@@ -1028,6 +1105,141 @@
             </div>
         </div>
     </section>
+
+
+    <section class="py-20 px-4 bg-slate-800" id="testimonials">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="section-title">What Our Students & Clients Say</h2>
+        <p class="text-center text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
+            Real results from people who have transformed their careers with our AI training and services
+        </p>
+        
+        <!-- Feedback Carousel -->
+        <div class="feedback-carousel relative overflow-hidden rounded-2xl bg-slate-900 p-6">
+            <div class="feedback-track flex transition-transform duration-500 ease-in-out" id="feedback-track">
+                <!-- Feedback Item 1 -->
+                <div class="feedback-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                    <div class="bg-slate-800 rounded-xl p-6 h-full border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold mr-3">
+                                JD
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">John Doe</h4>
+                                <p class="text-sm text-slate-400">AI Freelance Student</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 mb-4">"The AI training completely transformed my career. I went from zero to earning $2,000/month in just 60 days!"</p>
+                        <div class="feedback-image bg-slate-700 rounded-lg overflow-hidden h-48 flex items-center justify-center cursor-pointer" onclick="openLightbox('./img/feedback1.jpg')">
+                            <img src="./img/feedback1.jpg" alt="John's success screenshot" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <i class="fas fa-search-plus text-2xl text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feedback Item 2 -->
+                <div class="feedback-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                    <div class="bg-slate-800 rounded-xl p-6 h-full border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold mr-3">
+                                SA
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Sarah A.</h4>
+                                <p class="text-sm text-slate-400">Video Editing Client</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 mb-4">"The video editing service exceeded my expectations. My YouTube channel grew by 200% after using their services!"</p>
+                        <div class="feedback-image bg-slate-700 rounded-lg overflow-hidden h-48 flex items-center justify-center cursor-pointer" onclick="openLightbox('./img/feedback2.jpg')">
+                            <img src="./img/feedback2.jpg" alt="Sarah's YouTube analytics" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <i class="fas fa-search-plus text-2xl text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feedback Item 3 -->
+                <div class="feedback-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                    <div class="bg-slate-800 rounded-xl p-6 h-full border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold mr-3">
+                                MK
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Michael K.</h4>
+                                <p class="text-sm text-slate-400">Remote Job Student</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 mb-4">"Landed my first international remote job paying $45/hr just 3 weeks after completing the training. Life-changing!"</p>
+                        <div class="feedback-image bg-slate-700 rounded-lg overflow-hidden h-48 flex items-center justify-center cursor-pointer" onclick="openLightbox('./img/feedback3.jpg')">
+                            <img src="./img/feedback3.jpg" alt="Michael's job offer" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <i class="fas fa-search-plus text-2xl text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feedback Item 4 -->
+                <div class="feedback-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4">
+                    <div class="bg-slate-800 rounded-xl p-6 h-full border border-slate-700">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-600 flex items-center justify-center text-white font-bold mr-3">
+                                TP
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Temi P.</h4>
+                                <p class="text-sm text-slate-400">Content Creation Client</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 mb-4">"The AI content strategy tripled my engagement rates. I'm now getting brand deals worth ₦200,000 monthly!"</p>
+                        <div class="feedback-image bg-slate-700 rounded-lg overflow-hidden h-48 flex items-center justify-center cursor-pointer" onclick="openLightbox('./img/feedback4.jpg')">
+                            <img src="./img/feedback4.jpg" alt="Temi's engagement stats" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <i class="fas fa-search-plus text-2xl text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="feedback-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-800 bg-opacity-70 text-white w-10 h-10 rounded-full z-10">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="feedback-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-800 bg-opacity-70 text-white w-10 h-10 rounded-full z-10">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Dots Indicator -->
+            <div class="flex justify-center mt-6 space-x-2" id="feedback-dots"></div>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="text-center mt-12">
+            <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20share%20my%20success%20story%20with%20you!" 
+               target="_blank" 
+               class="btn-primary text-xl px-12 py-4">
+                <i class="fas fa-share-alt mr-3"></i>
+                Share Your Success Story
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+    <div class="max-w-4xl w-full mx-4 relative">
+        <button id="close-lightbox" class="absolute -top-12 right-0 text-white text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="w-full rounded-lg">
+    </div>
+</div>
+
 
     <!-- Footer -->
     <footer class="py-12 px-4 text-center bg-slate-950 border-t border-slate-700">
@@ -1047,12 +1259,6 @@
                 <a href="" class="text-slate-400 hover:text-blue-400 transition duration-300">
                     <i class="fab fa-instagram text-xl"></i>
                 </a>
-                <!-- <a href="https://youtube.com/@aligxadigitals?si=eLxJTyy1-W875Ypv" class="text-slate-400 hover:text-red-400 transition duration-300"> -->
-                    <!-- <i class="fab fa-youtube text-xl"></i> -->
-                </a>
-                <!-- <a href="#" class="text-slate-400 hover:text-blue-500 transition duration-300"> -->
-                    <!-- <i class="fab fa-telegram text-xl"></i> -->
-                </a>
             </div>
             
             <p class="text-slate-500">
@@ -1064,8 +1270,7 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks
-" 
+        <a href="https://wa.me/+2349032664629?text=Hi%20Aligxa%20Digitals%2C%20my%20name%20is%20%E2%80%A6%E2%80%A6%28your%20name%29%20I%20want%20to%20join%20your%20Al%20Freelance%20Training%20Program.%20Can%20you%20tell%20me%20more%20about%20%20enrollment%3F%0A%0AThanks" 
            target="_blank" 
            class="whatsapp-btn"
            title="Chat with us on WhatsApp">
@@ -1188,15 +1393,12 @@
                 }, 100);
             });
         });
-    </script>
 
-    <script>
         // Add click interaction for the main CTA button
         document.querySelector('.main-cta').addEventListener('click', function() {
             this.style.transform = 'scale(0.98)';
             setTimeout(() => {
                 this.style.transform = '';
-                alert('Ready to start your journey! 🚀');
             }, 150);
         });
 
@@ -1211,15 +1413,99 @@
                 this.style.borderLeft = 'none';
             });
         });
+
+        // WhatsApp function
+        function openWhatsApp() {
+            const phoneNumber = "2349032664629";
+            const message = "Hi Aligxa Digitals, my name is ……(your name) I want to join your Al Freelance Training Program. Can you tell me more about enrollment?";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
     </script>
 
     <script>
-  function openWhatsApp() {
-    const phoneNumber = "0902664629"; // replace with your WhatsApp number (in intl format, no +)
-    const message = "Hi Aligxa Digitals, my name is ……(your name) I want to join your Al Freelance Training Program. Can you tell me more about enrollment?";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  }
+    // Feedback Carousel Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('feedback-track');
+        const slides = document.querySelectorAll('.feedback-slide');
+        const dotsContainer = document.getElementById('feedback-dots');
+        const prevBtn = document.querySelector('.feedback-prev');
+        const nextBtn = document.querySelector('.feedback-next');
+        
+        let currentIndex = 0;
+        const slidesPerView = () => window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+        
+        // Create dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.classList.add('feedback-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+        
+        function updateCarousel() {
+            const slideWidth = track.offsetWidth / slidesPerView();
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            
+            // Update dots
+            document.querySelectorAll('.feedback-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+        
+        function nextSlide() {
+            if (currentIndex < slides.length - slidesPerView()) {
+                currentIndex++;
+                updateCarousel();
+            }
+        }
+        
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        }
+        
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+        
+        // Responsive behavior
+        window.addEventListener('resize', updateCarousel);
+        
+        // Initialize
+        updateCarousel();
+    });
+    
+    // Lightbox functionality
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        lightboxImg.src = src;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+    
+    document.getElementById('close-lightbox').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) closeLightbox();
+    });
 </script>
+
+
 </body>
 </html>
